@@ -17,3 +17,8 @@ python Navigation.py
 ## Rewards plot
 ![Alt text](rewards.png?raw=true "Title")
 
+## Future work
+* Implement Double DQN and prioritized experience replay techniques.
+* Analyze the effect of hyperparameters and architectures on DQN agent learning.
+
+
