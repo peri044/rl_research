@@ -14,7 +14,7 @@
 # In[1]:
 
 
-get_ipython().system('pip -q install ./python')
+# get_ipython().system('pip -q install ./python')
 
 
 # The environment is already saved in the Workspace and can be accessed at the file path provided below.  Please run the next code cell without making any changes.
@@ -26,7 +26,7 @@ from unityagents import UnityEnvironment
 import numpy as np
 
 # please do not modify the line below
-env = UnityEnvironment(file_name="/data/Banana_Linux_NoVis/Banana.x86_64")
+env = UnityEnvironment(file_name="C:/Users/Dheeraj Peri/Downloads/deep-reinforcement-learning/p1_navigation/Banana_Windows_x86_64/Banana_Windows_x86_64/Banana.exe")
 
 
 # Environments contain **_brains_** which are responsible for deciding the actions of their associated agents. Here we check for the first brain available, and set it as the default brain we will be controlling from Python.
@@ -99,7 +99,7 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.99
         score = 0
         
         for t in range(max_t):
-            action = agent.act(state, eps)
+            action = agent.act(state, eps).astype(np.int32)
 #             next_state, reward, done, _ = env.step(action)
 #             print (t)
             env_info = env.step(action)[brain_name]        # send the action to the environment
@@ -114,7 +114,7 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.99
         scores_window.append(score)       # save most recent score
         scores.append(score)              # save most recent score
         eps = max(eps_end, eps_decay*eps) # decrease epsilon
-        print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)), end="")
+        # print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)), end="")
         if i_episode % 100 == 0:
             print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
         if np.mean(scores_window)>=13.0:
