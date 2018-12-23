@@ -20,7 +20,7 @@ Clone [DRLND](https://github.com/udacity/deep-reinforcement-learning/) to begin 
 
 ## Dependencies
 
-For Windows, assuming you have Python 3.6 and pip installed, these are the additional packages I had to installed
+For Windows, assuming you have Python 3.6 and pip installed, these are the additional packages I had to install
 
 ```
 pip install matplotlib
