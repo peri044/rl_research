@@ -36,11 +36,13 @@ You can visualize the training on Windows by downloading the environment [Banana
 
 ## Instructions to run the project
 ```
-python Navigation.py
+python Continuous_Control.py
 ```
 ## Architecture
 
-The DQN agent in this repo consists of three fully connected layers with Relu activations. The architecture is 37 (state_size) -> 64 -> 32 -> 4 (action_size)
+The architecture of the DDPG agent is as shown 
+
+![Alt text](arch.png?raw=true "Title")
 
 Hyper parameters are as follows:
 * BUFFER_SIZE = int(1e5)  # replay buffer size
@@ -54,7 +56,7 @@ Hyper parameters are as follows:
 
 
 ## Results
-The game was solved in 216 episodes with the average reward of 13.09. The rewards plot looks as follows
+The game was solved in 216 episodes with the average reward of 30.08. The rewards plot looks as follows
 
 ![Alt text](rewards.png?raw=true "Title")
 
