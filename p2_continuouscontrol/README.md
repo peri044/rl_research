@@ -12,7 +12,7 @@ Clone [DRLND](https://github.com/udacity/deep-reinforcement-learning/) to begin 
 ## Files 
 * Continuous_Control.ipynb - Jupyter notebook to run the project 
 * Continuous_Control.py - Python script to run the project
-* model.py - model file which has the architecture for the Q-network
+* model.py - model file which has the architectures for actor and critic networks.
 * ddpg_agent.py - ddpg_agent which handles the step updates, experience replay and fixed Q-target techniques for the actor and critic model.
 * checkpoint_actor.pth - Model checkpoint file which has the weights of the actor network. 
 * checkpoint_critic.pth - Model checkpoint file which has the weights of the critic network. 
