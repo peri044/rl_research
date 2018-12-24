@@ -28,7 +28,6 @@ class Actor(nn.Module):
         self.fc2 = nn.Linear(fc1_units, fc2_units)
         self.fc3 = nn.Linear(fc2_units, action_size)
         self.batchnorm_1 = nn.BatchNorm1d(fc1_units)
-        self.batchnorm_2 = nn.BatchNorm1d(fc2_units)
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -38,8 +37,7 @@ class Actor(nn.Module):
 
     def forward(self, state):
         """Build an actor (policy) network that maps states -> actions."""
-        if state.dim() == 1:
-            state = torch.unsqueeze(state,0)
+        state = torch.unsqueeze(state,0)
         x = F.relu(self.fc1(state))
         x = self.batchnorm_1(x)
         x = F.relu(self.fc2(x))
@@ -65,7 +63,6 @@ class Critic(nn.Module):
         self.fc2 = nn.Linear(fcs1_units+action_size, fc2_units)
         self.fc3 = nn.Linear(fc2_units, 1)
         self.batchnorm_1 = nn.BatchNorm1d(fcs1_units)
-        self.batchnorm_2 = nn.BatchNorm1d(fc2_units)
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -75,8 +72,7 @@ class Critic(nn.Module):
 
     def forward(self, state, action):
         """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
-        if state.dim() == 1:
-            state = torch.unsqueeze(state,0)
+        state = torch.unsqueeze(state,0)
         xs = F.relu(self.fcs1(state))
         xs = self.batchnorm_1(xs)
         x = torch.cat((xs, action), dim=1)
