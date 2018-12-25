@@ -32,7 +32,7 @@ Set python path to unity agents
 set PYTHONPATH=%PYTHONPATH%;<path to deep-reinforcement-learning folder>\python
 ```
 
-You can visualize the training on Windows by downloading the environment [Banana env for Windows 64-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+You can visualize the training on Windows by downloading the environment [Reacher env for Windows 64-bit](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
 ## Instructions to run the project
 ```
