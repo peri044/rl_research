@@ -58,10 +58,10 @@ Hyper parameters are as follows:
 ## Results
 The game was solved in 2279 episodes with the average reward of 0.51. The rewards plot looks as follows
 
-![Alt text](rewards.png?raw=true "Title")
+![Alt text](rewards_marl.png?raw=true "Title")
 
 ## Future work
 * DDPG with different actor/critic networks for two agents convergence is very slow and unstable. Implementing Prioritized experience replay and other popular algorithms might boost performance.
-* As mentioned in the project instructions, I would like to implement TRPO, TNPG, D4PG methods and compare all of them.
+* Parallelize the existing code by taking advantage of multicore environments and running multiple agents for faster learning. Follow implementation of MADDPG lab to improve this code.
 
 
