@@ -6,7 +6,7 @@
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
 
-Clone [DRLND](https://github.com/udacity/deep-reinforcement-learning/) to begin the project. Checkout the p1_navigation folder for more details.
+Clone [DRLND](https://github.com/udacity/deep-reinforcement-learning/) to begin the project. Checkout the p3_collab-compet folder for more details.
 
 ![Trained Agent][image1]
 ## Files 
