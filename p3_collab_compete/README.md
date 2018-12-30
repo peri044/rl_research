@@ -40,7 +40,7 @@ python Tennis.py
 ```
 ## Algorithm
 
-We use Deep Deterministic Policy Gradient (DDPG) algorithm to solve this environment. Two agents uses their own actor/critic network and store their experiences in a shared replay buffer.
+We use Deep Deterministic Policy Gradient (DDPG) algorithm to solve this environment. Two agents use their own actor/critic network and store their experiences in a shared replay buffer.
 
 The architecture of the DDPG agent is as shown 
 
